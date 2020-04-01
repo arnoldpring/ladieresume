@@ -44,12 +44,19 @@ main {
             color:white;
             margin: 0 auto;
         }
+        .menu-wrap {
+            i {
+                display: block;
+            }
+        }
         .navs {
+            list-style: none;
             .nav {
                 border-top: 3px solid white;
                 padding: 0 4px;
                 margin: 0 3px;
                 font-size: 9px;
+                text-decoration: none;
             }
         }
         
@@ -66,19 +73,23 @@ main {
                 padding: 0.75rem 0.5rem;
                 width: 50%;
                 .pic {
+                    height: 100%;
                     img {
                         border: 2px solid rgb(224, 224, 224);
                         width: 100%;
+                        height: 100%;
                     }
                 }
             }
             .hello-wrap {
-                width: 29%;
+                width: 38%;
                 word-wrap: break-word;
                 padding: 0.1rem 0;
                 text-align: justify;
                 .sub {
                     font-size: 0.6rem;
+                    font-weight: normal;
+                    text-align: left;
                 }
                 h2 {
                     font-size: 1.125rem;
@@ -109,6 +120,7 @@ main {
                     font-size: 0.6rem;
                     margin-bottom: 0;
                     color: rgb(71, 206, 71);
+                    font-weight: normal;
                 }
                 p {
                     font-size: 0.6rem;
@@ -127,4 +139,28 @@ main {
     }
 
 
+}
+@media only screen and (max-width: 768px){
+    .main .navigation-wrap .menu-wrap i {
+        display: none;
+    }
+    .menu-wrap {
+        i {
+            // display: none;
+        }
+        .topspace {
+            display: none;
+        }
+        .navs {
+            display: block;
+            padding: 0;
+            background-color: rgb(29, 29, 29);
+
+            .nav {
+              border-top: 0 !important ;
+              font-size: 2rem !important;
+            }
+        }
+        
+    }
 }
